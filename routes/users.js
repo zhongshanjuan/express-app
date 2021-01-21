@@ -6,6 +6,26 @@ router.get('/', function (req, res, next) {
   res.send('respond with a resource !!!');
 });
 
+
+/**
+ * @api {post} /user/login 用户登录
+ * @apiDescription 用户登录
+ * @apiName login
+ * @apiGroup User
+ * @apiParam {string} username 用户名
+ * @apiParam {string} loginPass 密码
+ * @apiSuccess {json} result
+ * @apiSuccessExample {json} Success-Response:
+ *  {
+ *      code: 200,
+ *      msg: "success",
+ *     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+ *         
+ *     
+ *  }
+ * @apiSampleRequest http://localhost:3000/user/login
+ * @apiVersion 1.0.0
+ */
 router.post('/login', function (req, res, next) {
   console.log("json===");
   //json
